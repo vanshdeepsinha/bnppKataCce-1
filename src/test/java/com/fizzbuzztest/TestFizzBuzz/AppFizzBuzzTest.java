@@ -11,9 +11,11 @@ public class AppFizzBuzzTest
 {
 	private FizzBuzz fizzBuzz;
 	
+	private FizzBuzzMatcher fizzBuzzMatcher;
 	@Before
 	public void setup() {
 		fizzBuzz = new FizzBuzz();
+		fizzBuzzMatcher = new FizzBuzzMatcher();
 	}
    
     @SuppressWarnings("deprecation")
@@ -37,6 +39,7 @@ public class AppFizzBuzzTest
     	Assert.assertEquals("Fizz", retNumber);
     }
     
+    @SuppressWarnings("deprecation")
     @Test
     public void testNumberDivisiblebyFive() {
     	int num = 200;
@@ -44,5 +47,14 @@ public class AppFizzBuzzTest
     	String retNumber = fizzBuzz.play(num);
     	/*Checking if it is returning Fizz or not*/
     	Assert.assertEquals("Buzz", retNumber);
+    }
+    
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testNumberDivisiblebythreeAndFive() {
+    	int num = 15;
+    	String retNumber = fizzBuzzMatcher.play(num);
+    	/*Checking if it is returning FizzBuzz or not*/
+    	Assert.assertEquals("FizzBuzz", retNumber);
     }
 }
