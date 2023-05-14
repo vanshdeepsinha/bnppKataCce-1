@@ -8,6 +8,10 @@ public class FizzBuzzPopMatcher {
 			 return "FizzPop";
 		  }
 		
+		if (num % 5 == 0 && num % 7 == 0) {
+			 return "BuzzPop";
+		  }
+		
 		return String.valueOf(num);
 	}
 

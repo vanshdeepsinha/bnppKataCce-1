@@ -39,5 +39,16 @@ public class AppFizzBuzzPopTest {
     	/*Checking if it is returning the right integer or not*/
     	Assert.assertEquals("FizzPop", retNumber);
     }
+	
+	@SuppressWarnings("deprecation")
+	@Test
+    public void testNumberDivisiblebyFiveAndSeven()
+    {
+        /*Main Class of FizzBuzz Test*/
+    	int num =70;
+    	String retNumber = fizzBuzzPopMatcher.play(num);    	
+    	/*Checking if it is returning the right integer or not*/
+    	Assert.assertEquals("BuzzPop", retNumber);
+    }
 
 }
