@@ -31,10 +31,18 @@ public class AppFizzBuzzTest
     @SuppressWarnings("deprecation")
 	@Test
     public void testNumberDivisiblebyThree() {
-    	int num = 3;
+    	int num = 123;
     	String retNumber = fizzBuzz.play(num);
     	/*Checking if it is returning Fizz or not*/
     	Assert.assertEquals("Fizz", retNumber);
+    }
+    
+    @Test
+    public void testNumberDivisiblebyFive() {
+    	int num = 200;
     	
+    	String retNumber = fizzBuzz.play(num);
+    	/*Checking if it is returning Fizz or not*/
+    	Assert.assertEquals("Buzz", retNumber);
     }
 }
